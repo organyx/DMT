@@ -120,6 +120,33 @@
   <data name="Header" xml:space="preserve">
     <value>Russian</value>
   </data>
+  <data name="MenuTileHeading1" xml:space="preserve">
+    <value>MenuTileHeading1ru</value>
+  </data>
+  <data name="MenuTileHeading2" xml:space="preserve">
+    <value>MenuTileHeading2ru</value>
+  </data>
+  <data name="MenuTileHeading3" xml:space="preserve">
+    <value>MenuTileHeading3ru</value>
+  </data>
+  <data name="MenuTileHeading4" xml:space="preserve">
+    <value>MenuTileHeading4ru</value>
+  </data>
+  <data name="MenuTileHeading5" xml:space="preserve">
+    <value>MenuTileHeading5ru</value>
+  </data>
+  <data name="MenuTileHeading6" xml:space="preserve">
+    <value>MenuTileHeading6ru</value>
+  </data>
+  <data name="MenuTileHeading7" xml:space="preserve">
+    <value>MenuTileHeading7ru</value>
+  </data>
+  <data name="MenuTileHeading8" xml:space="preserve">
+    <value>MenuTileHeading8ru</value>
+  </data>
+  <data name="MenuTileHeading9" xml:space="preserve">
+    <value>MenuTileHeading9ru</value>
+  </data>
   <data name="SitePathName" xml:space="preserve">
     <value>RussianPathName</value>
   </data>

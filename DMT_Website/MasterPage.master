@@ -5,16 +5,72 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
+    <link href="Assets/CSS/MasterPageStyle.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+    <%--<div>
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
         
         </asp:ContentPlaceHolder>
-    </div>
+    </div>--%>
+        <div id="wrapper">
+            <%--===============================HEADER===============================--%>
+            <div id="header">
+              <span class="headerSpan">
+                  <asp:Label ID="HeaderLabel" runat="server" 
+                      Text="<% $Resources:Globalization, Header %>">
+                  </asp:Label>
+              </span>
+            </div>
+                <div id="container">
+                    <%--===============================LANGUAGE MENU===============================--%>
+                    <div id="menu">
+             
+
+                      <div id="tree">
+                        <asp:TreeView ID="TreeView1" DataSourceID="SiteMapDataSource1" runat="server" NodeIndent="15" ShowExpandCollapse="False" NodeStyle-CssClass="menunode" HoverNodeStyle-CssClass="menunodehover" SelectedNodeStyle-CssClass="menunodeselected" RootNodeStyle-CssClass="rootnode" ParentNodeStyle-CssClass="parentnode">
+                        </asp:TreeView>
+                      </div>
+                      <div id="dropdown">
+                        <asp:Menu ID="Menu1" DataSourceID="SiteMapDataSource1" runat="server" StaticDisplayLevels="1" Orientation="Horizontal" CssClass="topmenu" StaticMenuItemStyle-CssClass="dropmenunode" DynamicMenuItemStyle-CssClass="dynamicmenunode" StaticEnableDefaultPopOutImage="False" StaticPopOutImageUrl="~/images/arrowdw.png" DynamicEnableDefaultPopOutImage="False" DynamicPopOutImageUrl="~/images/arrowrw.png"  StaticHoverStyle-BackColor ="#0219B0" StaticHoverStyle-ForeColor="White" StaticSelectedStyle-BackColor="#0219B0" DynamicHoverStyle-BackColor="#A1BBFF" DynamicHoverStyle-ForeColor="#0219B0" DynamicSelectedStyle-ForeColor="#0219B0" DynamicMenuItemStyle-BackColor="#7BA0FF">
+                        </asp:Menu>
+                      </div> 
+                    </div>
+  
+                   <div id="content">
+                    <asp:Label ID="SitePathLabel" runat="server" Text="<% $Resources:Globalization, SitePathName %>"></asp:Label>
+            
+                     <asp:SiteMapPath ID="SiteMapPath1" runat="server" PathSeparator=" >>" ForeColor="#0219B0">
+                     </asp:SiteMapPath>
+
+                     <div id="languageSelect">
+                                  <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="true" 
+                                     onselectedindexchanged="DropDownList1_SelectedIndexChanged">
+                                     <asp:ListItem Value="en-GB">English</asp:ListItem>
+                                     <asp:ListItem Value="ru-RU">Russian</asp:ListItem>  
+                                  </asp:DropDownList>
+                               </div>
+               
+                       <hr class="breadcrumbhr" />
+          
+                     <%--===============================CONTENT===============================--%>
+                     <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        
+                      </asp:ContentPlaceHolder>
+
+                   </div>
+            </div>
+            <%--===============================FOOTER===============================--%>
+            <div id = "footer">
+              <span class="footerSpan">
+                Copyright &#169 DMT-I1
+              </span>       
+            </div>
+        </div>
     </form>
 </body>
 </html>
