@@ -1,7 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
-    <siteMapNode url="" title=""  description="">
-        <siteMapNode url="" title=""  description="" />
-        <siteMapNode url="" title=""  description="" />
+<siteMap enableLocalization="true" xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="Index.aspx" title="Home"  description="">
+        <siteMapNode url="Nodes/Tile1.aspx" title="$resources:Globalization,MenuTileHeading1"  description="" />
+        <siteMapNode url="Nodes/Tile2.aspx" title="$resources:Globalization,MenuTileHeading2"  description="" />
+        <siteMapNode url="Nodes/Tile3.aspx" title="$resources:Globalization,MenuTileHeading3"  description="" />
+        <siteMapNode url="Nodes/Tile4.aspx" title="$resources:Globalization,MenuTileHeading4"  description="" />
+        <siteMapNode url="Nodes/Tile5.aspx" title="$resources:Globalization,MenuTileHeading5"  description="" />
+        <siteMapNode url="Nodes/Tile6.aspx" title="$resources:Globalization,MenuTileHeading6"  description="" />
+        <siteMapNode url="Nodes/Tile7.aspx" title="$resources:Globalization,MenuTileHeading7"  description="" />
+        <siteMapNode url="Nodes/Tile8.aspx" title="$resources:Globalization,MenuTileHeading8"  description="" />
+        <siteMapNode url="Nodes/Tile9.aspx" title="$resources:Globalization,MenuTileHeading9"  description="" />
     </siteMapNode>
 </siteMap>

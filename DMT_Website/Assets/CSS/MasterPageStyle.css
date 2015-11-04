@@ -20,13 +20,13 @@
    border-left:1px solid #CFCFFF;
    border-right:1px solid #CFCFFF;
    border-top:1px solid #CFCFFF;
-   background-image:url("images/bg_header.png");
+   /*background-image:url("images/bg_header.png");*/
    background-repeat:repeat-x;
    text-align:center;
    float:left;
    border-top-left-radius:10px;
    border-top-right-radius:10px;
-   box-sizing:border-box; /* make border-width and padding a part of the set width and height, not added to it */
+   box-sizing:border-box; 
 }
 
 #container 
@@ -69,7 +69,7 @@
    border-left:1px solid #CFCFFF;
    border-right:1px solid #CFCFFF;
    border-bottom:1px solid #CFCFFF;
-   background-image:url("images/bg_footer.png");
+   /*background-image:url("images/bg_footer.png");*/
    background-repeat:repeat-x;
    text-align:center;
    float:left;
@@ -86,6 +86,19 @@
    color:#0219B0;
 }
 
+#menuBar
+{
+   width:100%;
+   height:30px;
+   background-color:#FFFFFF; 
+   text-align:center;
+}
+
+.menuBarItem
+{
+    display: inline;
+}
+
 .footerSpan
 {
    font-size:100%;
@@ -98,7 +111,91 @@
    max-width:100%;
 }
 
-@media screen and (min-width: 400px) 
+.imageThumbnail
+{
+    width: 340px;
+    height: 200px;
+}
+
+.breadcrumbhr
+{
+   color:#CFCFFF;
+   height:1px;
+   border: solid 1px #CFCFFF;
+}
+
+.menunode
+{
+   color:#0219B0;
+}
+
+.menunodeselected
+{
+   font-weight:bold;
+}
+
+.menunodehover
+{
+   text-decoration:underline;
+   color:#000000;
+}
+
+.rootnode
+{
+   font-size: 150%;    
+}
+
+.parentnode
+{
+   font-size:100%;    
+}
+
+.topmenu
+{
+   font-size:18pt; 
+   text-align:center;
+   background-color:#FFFFFF;
+   background-color:#eceff8;
+}
+
+.dropmenunode
+{
+   color:#FFFFFF;
+   background-color:#0219B0;
+   margin:0px 2px;
+   width:120px;
+   font-weight:bold;
+}
+
+.dynamicmenunode
+{
+   color:#FFFFFF;
+   background-color:#7ba0ff;
+   margin:0px 2px;
+   width:137px;
+}
+
+#tree 
+{
+   display:none;
+}
+
+#dropdown 
+{
+   display:block;
+   text-align:center; 
+}
+
+@media screen and (max-width: 399px)
+{
+    .imageThumbnail
+    {
+        width: 120px;
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 400px)
 {
    .headerSpan
    {
@@ -109,6 +206,12 @@
    {
       font-size:120%;     
    }
+
+   .imageThumbnail
+    {
+        width: 120px;
+        height: 100px;
+    }
 }
 
 @media screen and (min-width: 532px) 
@@ -119,6 +222,28 @@
       float:left;
       clear:none;
    }
+
+     #menu 
+   {
+      width:20%;
+      border-bottom:none;
+   }
+
+     #tree 
+   {
+      display:block;
+   }
+
+   #dropdown 
+   {
+      display:none;
+   }
+
+   .imageThumbnail
+    {
+        width: 160px;
+        height: 120px;
+    }
 }
 
 
@@ -128,5 +253,11 @@
    {
       width:90%;
    }
+
+    .imageThumbnail
+    {
+        width: 260px;
+        height: 180px;
+    }
 
 }

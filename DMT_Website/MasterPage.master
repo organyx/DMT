@@ -26,7 +26,29 @@
                   </asp:Label>
               </span>
             </div>
-                <div id="container">
+            <%--===============================MENU_BAR===============================--%>
+            <div id="menuBar">
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="searchbar" class="menuBarItem">
+                                    <span>Search...</span>
+                                </div>
+                                <div id="loginInput" class="menuBarItem">
+                                    <span>|         |</span>
+                                </div>
+                                <div id="passwdInput" class="menuBarItem">
+                                    <span>|         |</span>
+                                </div>
+                                <div id="loginBtn" class="menuBarItem">
+                                    <span> Login </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+            <%--===============================CONTAINER===============================--%>
+            <div id="container">
                     <%--===============================LANGUAGE MENU===============================--%>
                     <div id="menu">
              
