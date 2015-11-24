@@ -32,6 +32,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
                 DropDownList1.SelectedValue = cultureCode;
             }
 
+
+            loginBarInVisible.Visible = false;
         }
     }
 
@@ -43,5 +45,38 @@ public partial class MasterPage : System.Web.UI.MasterPage
         //Reload
         Response.Redirect(Request.Url.AbsolutePath);
 
+    }
+
+    protected void LoginBtn_Click(object sender, EventArgs e)
+    {
+        var login = inLogin.Text;
+        var passwd = inPasswd.Text;
+
+        if(login == "" || login == null)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", 
+               " <script> alert('Please enter your username'); </script>");
+        }
+
+        if (passwd == "" || passwd == null)
+        {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts",
+               " <script> alert('Passsword is incorrect'); </script>");
+        }
+
+        if(login == "test" && passwd == "test")
+        {
+            loginBarVisible.Visible = false;
+            loginBarInVisible.Visible = true;
+            userName.Text = "Welcome, " + login + " | ";
+        }
+    }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        loginBarInVisible.Visible = false;
+        loginBarVisible.Visible = true;
+        inLogin.Text = "";
+        inPasswd.Text = "";
     }
 }

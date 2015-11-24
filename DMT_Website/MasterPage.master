@@ -6,6 +6,8 @@
 <head runat="server">
     <title></title>
     <link href="Assets/CSS/MasterPageStyle.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="Assets/JS/jquery-2.1.4.min.js"></script>
+    <%--<script type="text/javascript" src="Assets/JS/Login.js"></script>--%>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -34,14 +36,33 @@
                                 <div id="searchbar" class="menuBarItem">
                                     <span>Search...</span>
                                 </div>
-                                <div id="loginInput" class="menuBarItem">
-                                    <span>|         |</span>
+                                <div id="loginBarVisible" class="menuBarItem" runat="server">
+                                    <div id="loginInput" class="menuBarItem">
+                                        <%--<input id="inLogin" type="text" title="inLogin" />--%>
+                                        <asp:TextBox ID="inLogin" runat="server"></asp:TextBox>
+                                    </div>
+                                    <div id="passwdInput" class="menuBarItem">
+                                        <%--<input id="inPasswd" type="password" title="inPasswd"/>--%>
+                                        <asp:TextBox ID="inPasswd" runat="server" TextMode="Password"></asp:TextBox>
+                                    </div>
+                                    <div id="loginBtn" class="menuBarItem">
+                                        <%--<input id="inLoginBtn" type="submit" value="Login" />--%>
+                                        <asp:Button ID="LoginBtn" runat="server" Text="Login" OnClick="LoginBtn_Click" />
+                                    </div>
                                 </div>
-                                <div id="passwdInput" class="menuBarItem">
-                                    <span>|         |</span>
-                                </div>
-                                <div id="loginBtn" class="menuBarItem">
-                                    <span> Login </span>
+                                <div id="loginBarInVisible" class="menuBarItem" runat="server">
+                                    <div id="username" class="menuBarItem">
+                                        <%--<span id="userName"></span>--%>
+                                        <asp:Label ID="userName" runat="server"></asp:Label>
+                                    </div>
+                                    <div id="logout" class="menuBarItem">
+                                        <%--<span id="quickMenu"></span>--%>
+                                        <asp:Label ID="quickMenu" runat="server" Text="Menu"></asp:Label>
+                                    </div>
+                                    <div id="logoutBtn" class="menuBarItem">
+                                        <%--<input id="inLogoutBtn" type="submit" value="Login" />--%>
+                                        <asp:Button ID="Button1" runat="server" Text="LogOut" OnClick="Button1_Click" />
+                                    </div>
                                 </div>
                             </td>
                         </tr>
